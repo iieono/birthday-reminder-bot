@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Reminders</title>
+</head>
+<body>
+    <h1>Send Birthday Reminders</h1>
+    <p>Click the button below to send birthday reminders:</p>
+    <form action="{% url 'send_messages' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Send Reminders</button>
+    </form>
+</body>
+</html>
